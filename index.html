@@ -123,8 +123,16 @@
                     	<p>Cryptography has a huge appetite for random data<p>
                     	<p>And your online Privacy and Security depends on Crypto<p>
                     	<p>The more you encrypt, the more entropy you need to consume<p>
-			<p>altcoin also requires high quality random data - coins have been
-			stolen because of weak RNGs</p>
+					    <p>altcoin also requires high quality random data - coins have been
+						stolen because of weak RNGs</p>
+					</section>
+					<section>
+						<h2>Non-crypto random numbers?</h2>
+						<img id="iconic" src="infographic.svg"/>
+						<p>Astronomy Miniconf reminds us that <em><strong>"SCIENCE!"</strong></em>
+						uses large-scale numerical simulations (Monte Carlo, Markov Chain, etc),
+						and while they can use PRNG, they need to be careful about periodicity/repeats</p>
+						<p>I know nothing about the "Gaming" industry, but they need it, surely?</p>
 					</section>
 					<section>
 						<h2>PRNG</h2>
@@ -178,7 +186,15 @@
 						</ul>
 					</section>
 					<section>
-						<h2>How far is too far?</h2>
+						<h2>Known Badness III</h2>
+						<p><img id="iconic" src="incognito.svg"/></p>
+						<ul>
+						<li>Everything "Edward Snowden"</li>
+						<li>! (Everything "Eben Moglen")</li>
+						</ul>
+					</section>
+					<section>
+						<h2>How are issued fixed?</h2>
 						<img id="iconic" src="layersdown.svg"/>
 						<p>When risks are &ldquo;addressed&rdquo; they are usually pushed either up or down the stack</p>
 						<p>They end up <em>requiring</em> trust in End-User Behaviour (unpatchable) or in the Hardware</p>
@@ -286,24 +302,7 @@
 					<p>Even though you should <em>use <code>/dev/urandom</em></code></p>
 					<p>OneRNG helps to avoid the need to block</p>
 					<p>Therefore machines that use /dev/random <em>run faster</em>?</p>
-					<p>Catalyst are simlating workloads to quantify this assertion</p>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>The more the merrier</h2>
-					<p>The more sources of entropy you have, the better off you are</p>
-					<p>As well as OneRNG, please add other sources</p>
-				</section>
-				<section>
-					<h2>Complements to OneRNG</h2>
-					<ul>
-						<li>SW: <strong>rtl-entropy</strong> from SDR - <a href="https://github.com/pwarren/rtl-entropy">https://github.com/pwarren/rtl-entropy</a> (Paul Warren, LCA2014)</li>
-						<li>HW: <strong>USBtrng</strong> - <a href="http://altusmetrum.org/USBtrng/">http://altusmetrum.org/USBtrng/</a> (Bdale Garbee/Keith Packard, DebConf 2014)</li>
-						<li>SW: <strong>Turbid</strong> from audio I/O - <a href="http://www.av8n.com/turbid/">http://www.av8n.com/turbid/</a> (John Denker, 2002-date)</li>
-						<li>HW: <strong>NeuG</strong> ("noisy") - <a href="http://git.gniibe.org/gitweb/?p=gnuk/neug.git">http://git.gniibe.org/gitweb/?p=gnuk/neug.git</a> (Yutaka Niibe, DebConf 2014)</li>
-					</ul>
+					<p>(Catalyst are simlating workloads to quantify this assertion)</p>
 				</section>
 			</section>
 
@@ -332,22 +331,43 @@
 				<section>
 					<h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
 					<img src="KS13jan.png"/>
+					<p>(As of Tue 13 Jan 2015)</p>
 				</section>
 				<section>
 					<h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
 					<p>50%&nbsp;&nbsp;funded after 2 days</p>
 					<p>100% funded after 6 days</p>
 					<p>200% funded after 18 days</p>
-					<p>Least Squares currently predicts 400% funding at close :-)</p>
+					<p>Least Squares currently predicts ~400% funding at close :-)</p>
 					<h3>Current position</h3>
 					<p>Tue Jan 13 2015: <strong>243</strong> backers, NZD<strong>$26,144</strong> raised, <strong>15</strong> days to go</p>
 				</section>
 			</section>
 
+			<section>
+				<section>
+					<h2>The more the merrier</h2>
+					<p>A small quantity of good entropy is enough to improve everything</p>
+					<p>But the more sources of entropy you have, the better off you are</p>
+					<p>As well as OneRNG, please add other sources</p>
+				</section>
+				<section>
+					<h2>Complements to OneRNG</h2>
+					<ul>
+						<li>SW: <strong>rtl-entropy</strong> from SDR - <a href="https://github.com/pwarren/rtl-entropy">https://github.com/pwarren/rtl-entropy</a> (Paul Warren, LCA2014)</li>
+						<li>HW: <strong>USBtrng</strong> - <a href="http://altusmetrum.org/USBtrng/">http://altusmetrum.org/USBtrng/</a> (Bdale Garbee/Keith Packard, DebConf 2014)</li>
+						<li>SW: <strong>Turbid</strong> from audio I/O - <a href="http://www.av8n.com/turbid/">http://www.av8n.com/turbid/</a> (John Denker, 2002-date)</li>
+						<li>HW: <strong>NeuG</strong> ("noisy") - <a href="http://git.gniibe.org/gitweb/?p=gnuk/neug.git">http://git.gniibe.org/gitweb/?p=gnuk/neug.git</a> (Yutaka Niibe, DebConf 2014)</li>
+					</ul>
+				</section>
+			</section>
+
+
 				<section>
 					<section>
 						<h2>What next?</h2>
 						<h2>Q &amp; A</h2>
+					    <h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
 						<h3>http://onerng.info/</h3>
 					</section>
 					<section>
@@ -376,6 +396,7 @@
 							<a href="http://thenounproject.com/term/ingognito/43595/">Incognito</a> by Alen Krummenacher, 
 							<a href="http://thenounproject.com/term/layers/26871/">Layers</a> by Cornelius Danger, 
 							<a href="http://thenounproject.com/term/search/71764/">Search</a> by Melvin Salas, 
+							<a href="http://thenounproject.com/term/infographic/12034/">Infographic</a> by Rob Gill,
 							<a href="http://thenounproject.com/term/seed-packet/41684/">Seed Packet</a> by Anton Gajdosik (Public Domain)
 						</p>
 						</div>
