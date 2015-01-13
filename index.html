@@ -37,6 +37,7 @@
 
 		<style type="text/css">
 .reveal section img#iconic { border:none; opacity:1; background: white; }
+.reveal section div#creditspage { font-size:50%; }
 		</style>
 	</head>
 
@@ -271,27 +272,38 @@
 
 			<section>
 				<section>
-					<h2>Diversion: What is /dev/random?</h2>
-					<p>It isn't what you think it is (it isn't what I thought it was either)</p>
-					<p>Thomas Hühn provided <a href="http://www.2uo.de/myths-about-urandom/">http://www.2uo.de/myths-about-urandom/</a></p>
-				</section>
-				<section>
-					<h2>This is NOT how it works &hellip;</h2>
-					<img src="structure-no.png"/>
-				</section>
-				<section>
-					<h2>This is more like it &hellip;</h2>
-					<img src="structure-yes.png"/>
-				</section>
-				<section>
-					<h2>/dev/random blocks</h2>
-					<p>Because when written, the NSA-designed SHA-1 was not fully "trusted"</p>
-					<p>The blocking behaviour is a defence against an untrusted DRBG</p>
+					<h2>Diversion: Why does /dev/random block?</h2>
+					<p>The NSA-designed SHA-1 was not fully "trusted"</p>
+					<p>The blocking behaviour is a defence against this untrusted DRBG</p>
 					<p><blockquote>Ted T'so, 2015 &ldquo;&hellip; the
 						paranoiacs were *right* that the NSA had introduced a back-door into a
 						crypto algorithm which they gifted to the civilian world.  It just
 						turned out to be DUAL-EC instead of SHA-1.&rdquo;</blockquote></p>
 					<p>Just use <em><code>/dev/urandom</code></em> :-)<p>
+				</section>
+				<section>
+					<h2>How does OneRNG help /dev/random?</h2>
+					<p>Even though you should <em>use <code>/dev/urandom</em></code></p>
+					<p>OneRNG helps to avoid the need to block</p>
+					<p>Therefore machines that use /dev/random <em>run faster</em></p>
+					<p>&hellip; even Gentoo!</p>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>The more the merrier</h2>
+					<p>The more sources of entropy you have, the better off you are</p>
+					<p>As well as OneRNG, please add other sources</p>
+				</section>
+				<section>
+					<h2>Complements to OneRNG</h2>
+					<ul>
+						<li>SW: <strong>rtl-entropy</strong> from SDR - <a href="https://github.com/pwarren/rtl-entropy">https://github.com/pwarren/rtl-entropy</a> (Paul Warren, LCA2014)</li>
+						<li>HW: <strong>USBtrng</strong> - <a href="http://altusmetrum.org/USBtrng/">http://altusmetrum.org/USBtrng/</a> (Bdale Garbee/Keith Packard, DebConf 2014)</li>
+						<li>SW: <strong>Turbid</strong> from audio I/O - <a href="http://www.av8n.com/turbid/">http://www.av8n.com/turbid/</a> (John Denker, 2002-date)</li>
+						<li>HW: <strong>NeuG</strong> ("noisy") - <a href="http://git.gniibe.org/gitweb/?p=gnuk/neug.git">http://git.gniibe.org/gitweb/?p=gnuk/neug.git</a> (Yutaka Niibe, DebConf 2014)</li>
+					</ul>
 				</section>
 			</section>
 
@@ -319,6 +331,7 @@
 				</section>
 				<section>
 					<h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
+					<img src="KS13jan.png"/>
 				</section>
 				<section>
 					<h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
@@ -327,7 +340,7 @@
 					<p>200% funded after 18 days</p>
 					<p>Least Squares currently predicts 400% funding at close :-)</p>
 					<h3>Current position</h3>
-					<p>Jan 7 2015: <strong>210</strong> backers, NZD<strong>$22,985</strong> raised, <strong>21</strong> days to go</p>
+					<p>Tue Jan 13 2015: <strong>243</strong> backers, NZD<strong>$26,144</strong> raised, <strong>15</strong> days to go</p>
 				</section>
 			</section>
 
@@ -339,7 +352,11 @@
 					</section>
 					<section>
 						<h2>Credits</h2>
-						<p>Presentation software - <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, hosted on <a href="https://github.com/">Github</a></p>
+						<p>Presentation resources :-</p>
+						<div id="creditspage">
+						<hr/>
+						<p>Software - <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, hosted on <a href="https://github.com/">Github</a></p>
+						<hr/>
 						<img id="iconic" src="thenounprojectlogo.svg"/>
 						<p>Icons used are from <a href="http://thenounproject.com/">The Noun Project</a>, <a href="http://creativecommons.org/licenses/by/3.0/us/">http://creativecommons.org/licenses/by/3.0/us/</a> licensed</p>
 						<p>
@@ -361,6 +378,7 @@
 							<a href="http://thenounproject.com/term/search/71764/">Search</a> by Melvin Salas, 
 							<a href="http://thenounproject.com/term/seed-packet/41684/">Seed Packet</a> by Anton Gajdosik (Public Domain)
 						</p>
+						</div>
 					</section>
 				</section>
 
