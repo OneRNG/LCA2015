@@ -300,6 +300,7 @@
 				<section>
 					<h2>What's the difference between /dev/random and /dev/urandom?</h2>
 					<p>These are fundamentally the same :-)</p>
+					<p>They will behave identically with sufficient entropy</p>
 					<p>Use <code>/dev/urandom</code></p>
 					<p>Use <code>/dev/urandom</code></p>
 					<p>Use <code>/dev/urandom</code></p>
@@ -309,19 +310,38 @@
 					<h2>How does OneRNG help /dev/random?</h2>
 					<p>Even though you should <em>use <code>/dev/urandom</em></code></p>
 					<p>OneRNG helps to avoid the need to block</p>
-					<p>Therefore machines that use /dev/random <em>run faster</em>?</p>
+					<p>Therefore systems that use /dev/random <em>run faster</em>?</p>
 					<p>(Catalyst are simlating workloads to quantify this assertion)</p>
 				</section>
 			</section>
 
 			<section>
 				<section>
+					<h2>The more the merrier</h2>
+					<p>A small quantity of good entropy is enough to improve everything</p>
+					<p>But the more sources of entropy you have, the better off you are</p>
+					<p>As well as OneRNG, please add other sources</p>
+				</section>
+				<section>
+					<h2>Complements to OneRNG</h2>
+					<ul>
+						<li>SW: <strong>rtl-entropy</strong> from SDR - <a href="https://github.com/pwarren/rtl-entropy">https://github.com/pwarren/rtl-entropy</a> (Paul Warren, LCA2014)</li>
+						<li>HW: <strong>USBtrng</strong> - <a href="http://altusmetrum.org/USBtrng/">http://altusmetrum.org/USBtrng/</a> (Bdale Garbee/Keith Packard, DebConf 2014)</li>
+						<li>SW: <strong>Turbid</strong> from audio I/O - <a href="http://www.av8n.com/turbid/">http://www.av8n.com/turbid/</a> (John Denker, 2002-date)</li>
+						<li>HW: <strong>NeuG</strong> ("noisy") - <a href="http://git.gniibe.org/gitweb/?p=gnuk/neug.git">http://git.gniibe.org/gitweb/?p=gnuk/neug.git</a> (Yutaka Niibe, DebConf 2014)</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
 					<h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
-					<p>In order to get commercial production set up, we went to Kickstarter
+					<p>To get volume production set up, we used Kickstarter
 					with an NZD<strong>$10,000</strong> target over 45 days<p>
 					<p>This is still running - we started just after Kiwicon8, on 15 Dec 2014, and will finish
 					a couple of weeks after LCA2015, on 29 Jan 2015</p>
 					<p><a href="https://www.kickstarter.com/projects/moonbaseotago/onerng-an-open-source-entropy-generator">https://www.kickstarter.com/projects/moonbaseotago/onerng-an-open-source-entropy-generator</a></p>
+					<img src="qr.svg"/>
 				</section>
 				<section>
 					<h2><img id="iconic" src="kickstarter-logo-light.svg"/></h2>
@@ -348,25 +368,7 @@
 					<p>200% funded after 18 days</p>
 					<p>Least Squares currently predicts ~400% funding at close :-)</p>
 					<h3>Current position</h3>
-					<p>Tue Jan 13 2015: <strong>243</strong> backers, NZD<strong>$26,144</strong> raised, <strong>15</strong> days to go</p>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>The more the merrier</h2>
-					<p>A small quantity of good entropy is enough to improve everything</p>
-					<p>But the more sources of entropy you have, the better off you are</p>
-					<p>As well as OneRNG, please add other sources</p>
-				</section>
-				<section>
-					<h2>Complements to OneRNG</h2>
-					<ul>
-						<li>SW: <strong>rtl-entropy</strong> from SDR - <a href="https://github.com/pwarren/rtl-entropy">https://github.com/pwarren/rtl-entropy</a> (Paul Warren, LCA2014)</li>
-						<li>HW: <strong>USBtrng</strong> - <a href="http://altusmetrum.org/USBtrng/">http://altusmetrum.org/USBtrng/</a> (Bdale Garbee/Keith Packard, DebConf 2014)</li>
-						<li>SW: <strong>Turbid</strong> from audio I/O - <a href="http://www.av8n.com/turbid/">http://www.av8n.com/turbid/</a> (John Denker, 2002-date)</li>
-						<li>HW: <strong>NeuG</strong> ("noisy") - <a href="http://git.gniibe.org/gitweb/?p=gnuk/neug.git">http://git.gniibe.org/gitweb/?p=gnuk/neug.git</a> (Yutaka Niibe, DebConf 2014)</li>
-					</ul>
+					<p>Thu Jan 15 2015: <strong>251</strong> backers, NZD<strong>$26,984</strong> raised, <strong>13</strong> days to go</p>
 				</section>
 			</section>
 
